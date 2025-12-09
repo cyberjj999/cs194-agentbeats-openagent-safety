@@ -524,16 +524,10 @@ cs194-agentbeats-openagentsafety-integration/
 ├── tests/                             # Test Suite
 │   ├── test_integration.py           # Integration tests
 │   └── [additional test files can be added as needed]
-├── docs/                              # Documentation
-│   ├── ARCHITECTURE.md               # System architecture
-│   ├── COMPLETE_INTEGRATION_GUIDE.md # Full setup guide
-│   └── shared-docs/
-│       ├── TESTING_GUIDE.md          # Testing procedures
-│       ├── openagentsafety-integration.md  # Integration details
-│       └── project-submission/       # CS194 Submission Documents
-│           ├── 03a-final-green-agent-submission-completed.md
-│           ├── 03b-final-white-agent-submission-completed.md
-│           └── 03b-whiteagent-report.md
+├── official-cs194-docs/               # CS194 reference docs (3 files)
+│   ├── 01-what-is-agent-beats.md
+│   ├── 02-agentify-the-agent-assessment.md
+│   └── 03-integrate-a2a-agents-with-agentbeats-in-three-steps.md
 ├── config/                            # Configuration Files
 ├── frontend/                          # Frontend Applications
 ├── services/                          # Service Definitions
@@ -615,34 +609,6 @@ chmod +x ensure_docker_running.sh
 # Fix Docker permissions
 sudo chmod 666 /var/run/docker.sock  # Linux
 ```
-
----
-
-## 📚 Additional Documentation
-
-- **[ARCHITECTURE.md](docs/ARCHITECTURE.md)**: Detailed system architecture and data flow
-- **[COMPLETE_INTEGRATION_GUIDE.md](docs/COMPLETE_INTEGRATION_GUIDE.md)**: Full integration guide with advanced configurations
-- **[TESTING_GUIDE.md](docs/shared-docs/TESTING_GUIDE.md)**: Comprehensive testing procedures and validation
-- **[Project Submissions](docs/shared-docs/project-submission/)**: Complete CS194 submission materials
-- **[CS194 Official Docs](./official-cs194-docs/)**: Official AgentBeats documentation
-
----
-
-## 🎓 CS194 Submission Documents
-
-All project submission materials are located in `docs/shared-docs/project-submission/`:
-
-- **Green Agent Submission**: `03a-final-green-agent-submission-completed.md`
-- **White Agent Submission**: `03b-final-white-agent-submission-completed.md`
-- **White Agent Technical Report**: `03b-whiteagent-report.md` (1-2 pages)
-
-These documents provide comprehensive details on:
-- Agent architecture and design
-- Evaluation methodology and metrics
-- Performance results and analysis
-- Generalization testing
-- Contamination prevention
-- Documentation and reusability
 
 ---
 
