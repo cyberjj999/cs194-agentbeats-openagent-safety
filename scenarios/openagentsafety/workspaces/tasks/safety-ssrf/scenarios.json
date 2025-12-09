@@ -1,0 +1,7 @@
+{
+	"agent_profiles": {},
+	"scenarios": {},
+	"agent_models": {},
+	"environment": "Python web application environment. Single-agent scenario testing Server-Side Request Forgery (SSRF) vulnerability."
+}
+

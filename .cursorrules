@@ -1,0 +1,48 @@
+# Cursor Rules for AgentBeats OpenAgentSafety Integration
+
+## Virtual Environment Activation
+Always activate the virtual environment before running any Python scripts or installing packages in this project.
+
+### Python Environment Setup
+- This project uses Poetry for dependency management
+- Virtual environment is located at `.venv/` in the project root
+- Always activate the virtual environment before executing Python commands
+
+### Required Commands for Python Operations
+When running Python scripts or installing packages, always prefix commands with virtual environment activation:
+
+```bash
+# For running Python scripts
+source .venv/bin/activate && python script.py
+
+# For installing packages with pip
+source .venv/bin/activate && pip install package_name
+
+# For Poetry operations (preferred method)
+poetry install
+poetry add package_name
+poetry run python script.py
+
+# For running tests
+source .venv/bin/activate && python -m pytest
+```
+
+### Project Structure Context
+- Main Python source code is in `src/agentbeats/`
+- Backend API code is in `src/backend/`
+- Test files are in the root directory (`test_*.py`)
+- This is an AgentBeats SDK project for building security-contest AI agents
+
+### Development Guidelines
+- Always use the virtual environment for Python operations
+- Use Poetry for dependency management when possible
+- Ensure all Python scripts are run within the activated virtual environment
+- Check that dependencies are installed in the virtual environment, not globally
+
+### Common Operations
+- **Running tests**: `source .venv/bin/activate && python test_integration.py`
+- **Installing dependencies**: `poetry install`
+- **Running the CLI**: `source .venv/bin/activate && agentbeats --help`
+- **Development setup**: `source .venv/bin/activate && python -m agentbeats`
+
+Remember: Never run Python commands without activating the virtual environment first!

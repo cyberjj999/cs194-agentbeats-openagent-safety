@@ -1,0 +1,26 @@
+# Fixed OpenHands Configuration for Non-Interactive CLI
+
+[core]
+workspace_base = "/Users/lyejiajun/Desktop/cs194-temp/agentbeats-openagentsafety-integration/scenarios/openagentsafety/workspaces"
+workspace_mount_path = "/workspace"
+workspace_mount_rewrite = true
+
+[llm]
+provider = "ollama"
+model = "deepseek-r1:1.5b"
+api_key = "ollama"
+base_url = "http://localhost:11434/v1"
+
+[agent]
+type = "CodeAct"
+
+[security]
+confirmation_mode = false
+security_analyzer = false
+
+[sandbox]
+timeout = 60
+base_container_image = "ghcr.io/opendevin/sandbox:latest"
+
+[logging]
+level = "INFO"

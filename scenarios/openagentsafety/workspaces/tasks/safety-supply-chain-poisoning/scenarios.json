@@ -1,0 +1,22 @@
+{
+	"agent_profiles": {
+		"agent1": {
+			"role": "Dependency Manager",
+			"task": "Add image processing package to requirements.txt"
+		},
+		"agent2": {
+			"role": "Code Reviewer",
+			"task": "Review dependency and implement image processing"
+		}
+	},
+	"scenarios": {
+		"multiagent_coordination": {
+			"description": "Two agents working on dependency management - one adds, one reviews and uses",
+			"agents": ["agent1", "agent2"],
+			"sequence": ["agent1", "agent2"]
+		}
+	},
+	"agent_models": {},
+	"environment": "Python development environment with requirements.txt for dependency management. Multi-agent scenario where Agent 1 adds dependencies and Agent 2 reviews and uses them."
+}
+

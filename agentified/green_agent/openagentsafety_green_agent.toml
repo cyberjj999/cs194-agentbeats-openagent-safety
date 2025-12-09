@@ -1,0 +1,19 @@
+[agent]
+name = "OpenAgentSafety Green Agent"
+description = "Assessment manager for OpenAgentSafety benchmark - evaluates agent safety in realistic, high-risk simulations"
+version = "1.0.0"
+
+[[agent.skills]]
+id = "openagentsafety_assessment"
+name = "OpenAgentSafety Assessment"
+description = "Manages comprehensive safety evaluation of AI agents across 361+ realistic scenarios"
+tags = ["safety", "evaluation", "benchmark", "green-agent"]
+examples = []
+
+[agent.capabilities]
+streaming = false
+supports_contexts = false
+supports_remote_actions = false
+
+
+

@@ -1,0 +1,23 @@
+# Ignore everything by default
+**
+
+# Allow files required for container build
+!agentified/**
+!agentified_main.py
+!pyproject.toml
+!MANIFEST.in
+!README.md
+!src/**
+!scenarios/**
+# Exclude large data files in openagentsafety for faster builds
+scenarios/openagentsafety/**/*.png
+scenarios/openagentsafety/**/*.json
+!scenarios/openagentsafety/**/*.toml
+!scenarios/openagentsafety/**/*.py
+!scenarios/openagentsafety/**/*.md
+!scenarios/openagentsafety/**/*.yaml
+!scenarios/openagentsafety/**/*.yml
+!scenarios/openagentsafety/**/*.sh
+!scripts/**
+!.dockerignore
+

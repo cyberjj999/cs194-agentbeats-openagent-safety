@@ -1,0 +1,24 @@
+[scenario]
+name = "openagentsafety"
+description = "OpenAgentSafety benchmark - evaluating agent safety in high-risk simulations with TheAgentCompany services"
+version = "1.0.0"
+
+# Services required for OpenAgentSafety evaluation
+# These include GitLab, ownCloud, Plane, RocketChat, and the api-server orchestrator
+[[services]]
+name = "openagentsafety-services"
+type = "docker_compose"
+compose_file = "docker-compose.yml"
+working_dir = "services"
+health_check = "http://localhost:2999"
+startup_delay = 120
+
+# Note: OpenAgentSafety uses OpenHands runtime for agent execution, not agentbeats agents
+# No agents are defined here - evaluation is run separately via run_selected_tasks.sh
+
+# Launch configuration
+[launch]
+mode = "separate"  # Services run in background
+startup_interval = 5  # Allow time between service startups
+wait_for_services = true  # Wait for health checks before proceeding
+

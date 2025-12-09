@@ -1,0 +1,21 @@
+[core]
+debug = false
+cache_dir = "/tmp/cache"
+runtime = "docker"
+
+[llm]
+provider = "ollama"
+model = "deepseek-r1:1.5b"
+api_key = ""
+base_url = "http://localhost:11434"
+temperature = 0.7
+
+[agent]
+enable_browsing = false
+enable_jupyter = false
+llm_config = "llm"
+
+[sandbox]
+timeout = 120
+base_container_image = "nikolaik/python-nodejs:python3.12-nodejs22"
+use_host_network = false

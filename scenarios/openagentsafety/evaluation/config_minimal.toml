@@ -1,0 +1,7 @@
+# Minimal OpenHands Configuration
+
+[llm]
+provider = "ollama"
+model = "deepseek-r1:1.5b"
+api_key = "ollama"
+base_url = "http://localhost:11434/v1"

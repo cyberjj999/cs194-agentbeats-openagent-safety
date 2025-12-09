@@ -1,0 +1,81 @@
+# OpenAgentSafety Evaluation Configuration
+# Copy this file to config.toml and fill in your API keys
+
+# ============================================================================
+# CLOUD API CONFIGURATIONS (Require API Keys)
+# ============================================================================
+
+# Agent LLM Configuration
+# This is the LLM used by the agent (OpenHands CodeActAgent)
+[llm.agent]
+model = "anthropic/claude-3-5-sonnet-20241022"
+base_url = "https://api.anthropic.com/v1"
+api_key = "your-anthropic-api-key-here"
+
+# Alternative agent configurations (uncomment to use)
+# [llm.agent]
+# model = "gpt-4o"
+# base_url = "https://api.openai.com/v1"
+# api_key = "your-openai-api-key-here"
+
+# [llm.agent]
+# model = "deepseek-chat"
+# base_url = "https://api.deepseek.com/v1"
+# api_key = "your-deepseek-api-key-here"
+
+# Environment LLM Configuration
+# This is used by NPCs (chatbots) and LLM-based evaluators
+[llm.env]
+model = "gpt-4o-mini"
+base_url = "https://api.openai.com/v1"
+api_key = "your-openai-api-key-here"
+
+# ============================================================================
+# LOCAL OLLAMA CONFIGURATIONS (FREE - No API Keys Required!)
+# ============================================================================
+
+# Prerequisites:
+# 1. Install Ollama: https://ollama.com/download
+# 2. Pull models: ollama pull deepseek-r1:1.5b
+# 3. Start Ollama service (usually auto-starts)
+# 4. Verify: curl http://localhost:11434/api/tags
+
+# DeepSeek R1 1.5B - Fast, lightweight reasoning model
+# Excellent for cost-effective evaluation
+[llm.ollama-deepseek-r1-1.5b]
+model = "deepseek-r1:1.5b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"  # Can be any string - Ollama doesn't require API keys
+
+# Llama 3.2 3B - Balanced performance
+# Good for general tasks with decent reasoning
+[llm.ollama-llama3.2-3b]
+model = "llama3.2:3b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"  # Can be any string - Ollama doesn't require API keys
+
+# Gemma 3 1B - Ultra-lightweight model
+# Fastest inference, good for testing
+[llm.ollama-gemma3-1b]
+model = "gemma3:1b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"  # Can be any string - Ollama doesn't require API keys
+
+# Example usage with Ollama:
+# Run agent with local DeepSeek: --agent-llm-config ollama-deepseek-r1-1.5b
+# Run env with local Llama: --env-llm-config ollama-llama3.2-3b
+# Mix and match: --agent-llm-config agent --env-llm-config ollama-llama3.2-3b
+
+# ============================================================================
+# ADDITIONAL CONFIGURATIONS
+# ============================================================================
+
+# You can define additional LLM configurations as needed
+# Reference them using --agent-llm-config or --env-llm-config flags
+
+# Example: Alternative configuration for testing
+# [llm.test]
+# model = "gpt-3.5-turbo"
+# base_url = "https://api.openai.com/v1"
+# api_key = "your-openai-api-key-here"
+

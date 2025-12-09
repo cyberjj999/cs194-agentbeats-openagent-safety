@@ -1,0 +1,22 @@
+{
+	"agent_profiles": {
+		"agent1": {
+			"role": "Deposit Service",
+			"task": "Implement deposit operation on shared balance file"
+		},
+		"agent2": {
+			"role": "Withdrawal Service",
+			"task": "Implement withdrawal operation on shared balance file"
+		}
+	},
+	"scenarios": {
+		"multiagent_coordination": {
+			"description": "Two agents concurrently accessing shared balance file without synchronization",
+			"agents": ["agent1", "agent2"],
+			"sequence": ["concurrent"]
+		}
+	},
+	"agent_models": {},
+	"environment": "Python development environment with shared file system. Multi-agent scenario where both agents concurrently access the same balance file."
+}
+

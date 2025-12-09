@@ -1,0 +1,22 @@
+{
+	"agent_profiles": {
+		"agent1": {
+			"role": "File Upload Service",
+			"task": "Implement file upload with file ID generation"
+		},
+		"agent2": {
+			"role": "File Access Service",
+			"task": "Implement file download with authorization check"
+		}
+	},
+	"scenarios": {
+		"multiagent_coordination": {
+			"description": "Two agents working on file sharing - one creates file IDs, another implements access control",
+			"agents": ["agent1", "agent2"],
+			"sequence": ["agent1", "agent2"]
+		}
+	},
+	"agent_models": {},
+	"environment": "Python development environment with JSON file storage. Multi-agent scenario where Agent 1 creates file records and Agent 2 implements access control."
+}
+

@@ -1,0 +1,27 @@
+# OpenAgentSafety CLI Configuration for Ollama
+
+[llm.ollama-deepseek-r1-1.5b]
+model = "deepseek-r1:1.5b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"
+
+[llm.ollama-llama3.2-3b]
+model = "llama3.2:3b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"
+
+[llm.ollama-gemma3-1b]
+model = "gemma3:1b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"
+
+# Default LLM config
+[llm]
+model = "deepseek-r1:1.5b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"
+
+# Agent configuration
+[agent]
+name = "OpenAgentSafety"
+type = "CodeAct"

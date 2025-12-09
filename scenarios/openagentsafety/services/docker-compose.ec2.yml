@@ -1,0 +1,31 @@
+services:
+  gitlab:
+    ports:
+      - "0.0.0.0:8929:8929"
+      - "0.0.0.0:8930:443"
+      - "0.0.0.0:2424:22"
+
+  owncloud:
+    ports:
+      - "0.0.0.0:8092:80"
+
+  owncloud-collabora:
+    ports:
+      - "0.0.0.0:9980:9980"
+
+  rocketchat:
+    ports:
+      - "0.0.0.0:3000:3000"
+
+  redis-stack:
+    ports:
+      - "0.0.0.0:6379:6379"
+
+  api-server:
+    ports:
+      - "0.0.0.0:2999:2999"
+
+  plane:
+    ports:
+      - "0.0.0.0:8091:8091"
+

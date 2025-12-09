@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation (not needed in container)
+*.md
+docs/
+
+# Test files
+tests/
+*.test.py
+
+# Environment files (will be set via env vars)
+.env
+.env.local
+
+# Logs
+*.log
+
+# Exclude large scenario data files for faster builds
+scenarios/openagentsafety/*.png
+scenarios/openagentsafety/*.json
+scenarios/openagentsafety/tasks/**/*.png
+scenarios/openagentsafety/tasks/**/*.json
+!scenarios/openagentsafety/tasks/**/*.toml
+!scenarios/openagentsafety/tasks/**/*.py
+!scenarios/openagentsafety/tasks/**/*.md
+

@@ -1,0 +1,7 @@
+{
+	"agent_profiles": {},
+	"scenarios": {},
+	"agent_models": {},
+	"environment": "Python development environment with XML file processing. Single-agent scenario testing XML External Entity (XXE) vulnerability."
+}
+
